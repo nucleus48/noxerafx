@@ -1,97 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoxeraFX</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>NoxeraFX</title>
-  <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
+  <body>
+    <header class="light-bb">
+      <nav class="navbar navbar-expand-lg">
+        <a
+          class="navbar-brand"
+          style="display: flex; gap: 0.5rem; align-items: center"
+          href="index.html"
+        >
+          <img src="assets/img/logo.svg" alt="logo" />
+          <div style="font-size: 24px; font-weight: 700">NoxeraFX</div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#headerMenu"
+          aria-controls="headerMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="icon ion-md-menu"></i>
+        </button>
 
-<body>
-  <header class="light-bb">
-    <nav class="navbar navbar-expand-lg">
-      <a class='navbar-brand' style="display:flex;gap:.5rem;align-items:center;" href='exchange-light.html'>
-        <img src="assets/img/logo.svg" alt="logo">
-        <div style="font-size:24px;font-weight:700;">
-          NoxeraFX
+        <div class="collapse navbar-collapse" id="headerMenu">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html" role="button"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="exchange.html" role="button">
+                Exchange
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Markets
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="markets.html">Markets</a>
+                <a class="dropdown-item" href="market-line.html"
+                  >Markets Line</a
+                >
+                <a class="dropdown-item" href="market-bar.html">Markets Bar</a>
+                <a class="dropdown-item" href="market-crypto.html"
+                  >Market Crypto</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Others
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="technical-analysis.html"
+                  >Technical Analysis</a
+                >
+                <a class="dropdown-item" href="cross-rates.html">Cross Rates</a>
+                <a class="dropdown-item" href="symbol-info.html">Symbol Info</a>
+                <a class="dropdown-item" href="heat-map.html">Heat Map</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <a class="btn-1" href="/signup">Sign In</a>
+            <a class="btn-2" href="/signin">Get Started</a>
+          </ul>
         </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerMenu"
-        aria-controls="headerMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="icon ion-md-menu"></i>
-      </button>
+      </nav>
+    </header>
 
-      <div class="collapse navbar-collapse" id="headerMenu">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/index.html" role="button">
-              Landing Page
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="exchange.html" role="button">
-              Exchange
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              Markets
-            </a>
-            <div class="dropdown-menu">
-              <a class='dropdown-item' href='markets.html'>Markets</a>
-              <a class='dropdown-item' href='market-line.html'>Markets Line</a>
-              <a class='dropdown-item' href='market-bar.html'>Markets Bar</a>
-              <a class='dropdown-item' href='market-screener.html'>Market Screener</a>
-              <a class='dropdown-item' href='market-crypto.html'>Market Crypto</a>
-            </div>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              Others
-            </a>
-            <div class="dropdown-menu">
-              <a class='dropdown-item' href='technical-analysis.html'>Technical Analysis</a>
-              <a class='dropdown-item' href='cross-rates.html'>Cross Rates</a>
-              <a class='dropdown-item' href='symbol-info.html'>Symbol Info</a>
-              <a class='dropdown-item' href='heat-map.html'>Heat Map</a>
-            </div>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto">
-          <a class='btn-1' href='app/signup'>Sign In</a>
-          <a class='btn-2' href='app/signin'>Get Started</a>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <div class="landing-hero">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h2>A trusted and secure cryptocurrency exchange.</h2>
-          <p>Crypo is the most advanced UI kit for making the Blockchain platform.
-            This kit comes with 4 different exchange page, market, wallet and many more</p>
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Enter Your Email" aria-label="Enter Your Email"
-              aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-primary" type="button" id="button-addon2">Get Started</button>
+    <div class="landing-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>A trusted and secure cryptocurrency exchange.</h2>
+            <p>
+              Crypo is the most advanced UI kit for making the Blockchain
+              platform. This kit comes with 4 different exchange page, market,
+              wallet and many more
+            </p>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Your Email"
+                aria-label="Enter Your Email"
+                aria-describedby="button-addon2"
+              />
+              <div class="input-group-append">
+                <a
+                  class="btn btn-primary"
+                  style="color: white; display: grid; place-items: center"
+                  href="/signup"
+                  type="button"
+                  id="button-addon2"
+                >
+                  Get Started
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="offset-md-1 col-md-5">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container tradingview-tecnical-analys">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+          <div class="offset-md-1 col-md-5">
+            <!-- TradingView Widget BEGIN -->
+            <div
+              class="tradingview-widget-container tradingview-tecnical-analys"
+            >
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+                async
+              >
                 {
                   "interval": "1m",
                     "width": "100%",
@@ -103,20 +145,23 @@
                                 "colorTheme": "light"
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="container-fluid no-fluid">
-    <div class="row sm-gutters">
-      <!-- TradingView Widget BEGIN -->
-      <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
-          async>
+    <div class="container-fluid no-fluid">
+      <div class="row sm-gutters">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script
+            type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+            async
+          >
             {
               "width": "100%",
                 "height": 490,
@@ -127,23 +172,29 @@
                           "locale": "en"
             }
           </script>
-      </div>
-      <!-- TradingView Widget END -->
-    </div>
-  </div>
-
-  <div class="landing-feature landing-coin-price bt-none">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Check your favorite coin price <br> within a glance</h2>
         </div>
-        <div class="col-md-3 mb30">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+        <!-- TradingView Widget END -->
+      </div>
+    </div>
+
+    <div class="landing-feature landing-coin-price bt-none">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>
+              Check your favorite coin price <br />
+              within a glance
+            </h2>
+          </div>
+          <div class="col-md-3 mb30">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                async
+              >
                 {
                   "symbol": "BINANCE:BTCUSDT",
                     "width": "100%",
@@ -159,15 +210,18 @@
                                         "largeChartUrl": ""
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
-        </div>
-        <div class="col-md-3 mb30">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          <div class="col-md-3 mb30">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                async
+              >
                 {
                   "symbol": "BINANCE:ETHUSDT",
                     "width": "100%",
@@ -183,15 +237,18 @@
                                         "largeChartUrl": ""
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
-        </div>
-        <div class="col-md-3 mb30">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          <div class="col-md-3 mb30">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                async
+              >
                 {
                   "symbol": "BINANCE:XRPUSDT",
                     "width": "100%",
@@ -207,15 +264,18 @@
                                         "largeChartUrl": ""
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
-        </div>
-        <div class="col-md-3 mb30">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          <div class="col-md-3 mb30">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                async
+              >
                 {
                   "symbol": "BINANCE:BNBUSDT",
                     "width": "100%",
@@ -231,15 +291,18 @@
                                         "largeChartUrl": ""
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
-        </div>
-        <div class="col-md-3 mb30">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          <div class="col-md-3 mb30">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                async
+              >
                 {
                   "symbol": "BINANCE:ADAUSDT",
                     "width": "100%",
@@ -255,15 +318,18 @@
                                         "largeChartUrl": ""
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
-        </div>
-        <div class="col-md-3 mb30">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          <div class="col-md-3 mb30">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                async
+              >
                 {
                   "symbol": "BINANCE:DOGEUSDT",
                     "width": "100%",
@@ -279,15 +345,18 @@
                                         "largeChartUrl": ""
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
-        </div>
-        <div class="col-md-3 mb30">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          <div class="col-md-3 mb30">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                async
+              >
                 {
                   "symbol": "BINANCE:DOTUSDT",
                     "width": "100%",
@@ -303,15 +372,18 @@
                                         "largeChartUrl": ""
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
-        </div>
-        <div class="col-md-3 mb30">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          <div class="col-md-3 mb30">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                async
+              >
                 {
                   "symbol": "BINANCE:SOLUSDT",
                     "width": "100%",
@@ -327,25 +399,31 @@
                                         "largeChartUrl": ""
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="landing-feature">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Check fiat currency cross rates <br> within a second</h2>
-        </div>
-        <div class="col-md-12">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+    <div class="landing-feature">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>
+              Check fiat currency cross rates <br />
+              within a second
+            </h2>
+          </div>
+          <div class="col-md-12">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js"
+                async
+              >
                 {
                   "width": "100%",
                     "height": 400,
@@ -365,25 +443,31 @@
                             "locale": "en"
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="landing-feature">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Check real-time heat map find opportunities <br> and trade with confidence</h2>
-        </div>
-        <div class="col-md-12">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript"
-              src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js" async>
+    <div class="landing-feature">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>
+              Check real-time heat map find opportunities <br />
+              and trade with confidence
+            </h2>
+          </div>
+          <div class="col-md-12">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js"
+                async
+              >
                 {
                   "width": "100%",
                     "height": 400,
@@ -403,24 +487,30 @@
                             "locale": "en"
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
         </div>
       </div>
     </div>
-  </div>
-  <div class="landing-feature">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2>Check latest news and key events of popular <br> companies and cryptocurrencies</h2>
-        </div>
-        <div class="col-md-12">
-          <!-- TradingView Widget BEGIN -->
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js"
-              async>
+    <div class="landing-feature">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>
+              Check latest news and key events of popular <br />
+              companies and cryptocurrencies
+            </h2>
+          </div>
+          <div class="col-md-12">
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js"
+                async
+              >
                 {
                   "colorTheme": "light",
                     "isTransparent": false,
@@ -430,24 +520,27 @@
                             "locale": "en"
                 }
               </script>
+            </div>
+            <!-- TradingView Widget END -->
           </div>
-          <!-- TradingView Widget END -->
         </div>
       </div>
     </div>
-  </div>
 
-  <footer class="landing-footer-two">
-    <div style="text-align:center;padding:1rem;background:hsl(0 0% 7%);color:hsl(0 0% 30%);">2024 NoxeraFX. All rights resevered.</div>
-  </footer>
+    <footer
+      class="landing-footer-two"
+      style="background: rgb(31 41 55); height: 6rem"
+    >
+      <div style="text-align: center; color: rgb(209 213 219)">
+        &copy; 2024 NoxeraFX. All rights resevered.
+      </div>
+    </footer>
 
-
-  <script src="assets/js/jquery-3.4.1.min.js"></script>
-  <script src="assets/js/popper.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/amcharts-core.min.js"></script>
-  <script src="assets/js/amcharts.min.js"></script>
-  <script src="assets/js/custom.js"></script>
-</body>
-
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/amcharts-core.min.js"></script>
+    <script src="assets/js/amcharts.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
 </html>
