@@ -3,7 +3,8 @@ import { useDocumentData } from "@/hooks/useDocumentData";
 import { createUserAccount, firestoreRefs } from "@/lib/firestore";
 import { User } from "@/types";
 import { useUser } from "@clerk/clerk-react";
-import { PropsWithChildren, createContext, useContext } from "react";
+import { updateDoc } from "firebase/firestore";
+import { PropsWithChildren, createContext, useContext, useEffect } from "react";
 
 export const UserAccountContext = createContext<User | null>(null);
 
@@ -15,9 +16,19 @@ export default function UserProvider({ children }: PropsWithChildren) {
       null,
       user!.id,
       user!.fullName!,
-      user!.emailAddresses[0].emailAddress
+      user!.primaryEmailAddress!.emailAddress
     )
   );
+
+  useEffect(() => {
+    if (!userAccount) return;
+    if (user?.fullName != userAccount.name)
+      updateDoc(firestoreRefs.user(user!.id), { name: user!.fullName! });
+    else if (user?.primaryEmailAddress!.emailAddress != userAccount.email)
+      updateDoc(firestoreRefs.user(user!.id), {
+        email: user.primaryEmailAddress!.emailAddress,
+      });
+  }, [user, userAccount]);
 
   if (!userAccount) return <LoadingIndicator />;
 

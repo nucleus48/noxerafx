@@ -36,6 +36,10 @@ const router = createBrowserRouter(
           path="/history"
           lazy={() => import("@/routes/(private)/history")}
         />
+        <Route
+          path="/investment"
+          lazy={() => import("@/routes/(private)/investment")}
+        />
       </Route>
     </Route>
   )
