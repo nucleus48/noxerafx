@@ -1,5 +1,5 @@
 import { ActionData } from "@/types";
-import { ActionFunctionArgs, Form, useActionData } from "react-router-dom";
+import { Form, useActionData } from "react-router-dom";
 
 export function Component() {
   const actionData = useActionData() as ActionData | null;
@@ -74,11 +74,7 @@ export function Component() {
   );
 }
 
-export async function action({ request }: ActionFunctionArgs) {
-  const formData = await request.formData();
-  const file = formData.get("proof") as File;
-  const amount = parseInt(formData.get("amount") as string);
-
+export async function action() {
   return {
     success: true,
     message: "Your deposit request is being processed.",
