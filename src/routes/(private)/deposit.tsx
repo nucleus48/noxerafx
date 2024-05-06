@@ -1,6 +1,8 @@
 import { ActionData } from "@/types";
 import { Form, useActionData } from "react-router-dom";
 
+const btcAddress = "Your Bitcoin Address";
+
 export function Component() {
   const actionData = useActionData() as ActionData | null;
 
@@ -41,8 +43,12 @@ export function Component() {
         <div>
           <div className="text-sm font-medium">BTC Address</div>
           <div className="relative">
-            <input className="input" disabled hidden />
-            <button className="absolute top-0 bg-white border rounded-md right-0 h-full text-xs grid place-items-center px-2 font-medium">
+            <input className="input" value={btcAddress} disabled hidden />
+            <button
+            type="button"
+              onClick={() => copyToClipboard(btcAddress)}
+              className="absolute top-0 bg-white border rounded-md right-0 h-full text-xs grid place-items-center px-2 font-medium hover:bg-slate-600 hover:text-white"
+            >
               Copy
             </button>
           </div>
@@ -80,4 +86,9 @@ export async function action() {
     message:
       "Deposit request successfull. Your request will be processed within 24 hours.",
   } as ActionData;
+}
+
+function copyToClipboard(text: string) {
+  const clipboard = new Clipboard();
+  clipboard.writeText(text);
 }
