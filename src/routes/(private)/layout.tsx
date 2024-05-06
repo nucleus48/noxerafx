@@ -40,7 +40,7 @@ export function Component() {
 
       <nav
         onClick={() => setOpenNav(false)}
-        className={`fixed transition-all h-screen w-screen top-0 left-0 backdrop-brightness-50 ${
+        className={`fixed text-gray-700 transition-all h-screen w-screen top-0 left-0 backdrop-brightness-50 ${
           openNav ? "opacity-100 z-50" : "opacity-0 -z-50"
         }`}
       >

@@ -24,6 +24,14 @@ const router = createBrowserRouter(
           path="/profile/security"
           lazy={() => import("@/routes/(private)/security")}
         />
+        <Route
+          path="/deposit"
+          lazy={() => import("@/routes/(private)/deposit")}
+        />
+        <Route
+          path="/withdraw"
+          lazy={() => import("@/routes/(private)/withdraw")}
+        />
       </Route>
     </Route>
   )

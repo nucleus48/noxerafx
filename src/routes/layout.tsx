@@ -39,6 +39,10 @@ const privateRoutes = [
   "/dashboard",
   "/profile",
   "/profile/security",
+  "/deposit",
+  "/withdraw",
+  "/investment",
+  "/history",
 ];
 
 function Protected({ children }: PropsWithChildren) {

@@ -8,3 +8,8 @@ export type User ={
   totalWithdraws: number
   totalInvestments: number
 }
+
+export type ActionData = {
+  success: boolean
+  message: string
+}
