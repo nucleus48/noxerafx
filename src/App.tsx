@@ -32,6 +32,10 @@ const router = createBrowserRouter(
           path="/withdraw"
           lazy={() => import("@/routes/(private)/withdraw")}
         />
+        <Route
+          path="/history"
+          lazy={() => import("@/routes/(private)/history")}
+        />
       </Route>
     </Route>
   )

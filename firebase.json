@@ -34,6 +34,14 @@
       {
         "source": "/signup",
         "destination": "/app.html"
+      },
+      {
+        "source": "/history",
+        "destination": "/app.html"
+      },
+      {
+        "source": "/investment",
+        "destination": "/app.html"
       }
     ],
     "cleanUrls": true

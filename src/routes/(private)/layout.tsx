@@ -55,7 +55,7 @@ export function Component() {
               <BiArrowLeft className="text-2xl" />
             </button>
           </div>
-          <ul className="flex flex-col gap-2 font-medium pt-8 pl-6 pr-12">
+          <ul className="flex flex-col gap-4 text-lg font-medium pt-8 pl-6 pr-12">
             <li>
               <Link to="/dashboard" className="flex items-center gap-2">
                 <MaterialSymbolsDashboard />
