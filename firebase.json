@@ -1,0 +1,44 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "/dashboard",
+        "destination": "/app.html"
+      },
+      {
+        "source": "/profile",
+        "destination": "/app.html"
+      },
+      {
+        "source": "/profile/security",
+        "destination": "/app.html"
+      },
+      {
+        "source": "/deposit",
+        "destination": "/app.html"
+      },
+      {
+        "source": "/withdraw",
+        "destination": "/app.html"
+      },
+      {
+        "source": "/signin",
+        "destination": "/app.html"
+      },
+      {
+        "source": "/signup",
+        "destination": "/app.html"
+      }
+    ],
+    "cleanUrls": true
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
