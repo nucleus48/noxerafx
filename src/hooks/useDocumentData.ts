@@ -14,7 +14,6 @@ export function useDocumentData<T extends DocumentData>(
   useEffect(
     () =>
       onSnapshot(ref, (snapshot) => {
-        console.log(snapshot.data());
         if (!snapshot.exists()) return create();
         setData(snapshot.data());
       }),

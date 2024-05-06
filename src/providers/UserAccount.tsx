@@ -1,17 +1,22 @@
 import LoadingIndicator from "@/components/LoadingIndicator";
 import { useDocumentData } from "@/hooks/useDocumentData";
 import { createUserAccount, firestoreRefs } from "@/lib/firestore";
-import { UserAccount } from "@/types";
+import { User } from "@/types";
 import { useUser } from "@clerk/clerk-react";
 import { PropsWithChildren, createContext, useContext } from "react";
 
-export const UserAccountContext = createContext<UserAccount | null>(null);
+export const UserAccountContext = createContext<User | null>(null);
 
-export default function UserAccountProvider({ children }: PropsWithChildren) {
+export default function UserProvider({ children }: PropsWithChildren) {
   const { user } = useUser();
   const userAccount = useDocumentData(
-    firestoreRefs.userAccount(user!.id),
-    createUserAccount.bind(null, user!.id)
+    firestoreRefs.user(user!.id),
+    createUserAccount.bind(
+      null,
+      user!.id,
+      user!.fullName!,
+      user!.emailAddresses[0].emailAddress
+    )
   );
 
   if (!userAccount) return <LoadingIndicator />;
@@ -23,6 +28,6 @@ export default function UserAccountProvider({ children }: PropsWithChildren) {
   );
 }
 
-export function useUserAccount() {
+export function useAppUser() {
   return useContext(UserAccountContext);
 }
