@@ -22,9 +22,9 @@ export function Component() {
 
   return (
     <UserAccountProvider>
-      <header className="px-4 py-2 flex items-center gap-2 border-b">
+      <header className="px-8 py-8 flex items-center gap-2 border-b">
         <img src="/assets/img/logo.svg" alt="logo" className="w-4" />
-        <div className="text-xl font-bold mr-auto">NoxeraFX</div>
+        <div className="text-xl font-bold mr-auto ml-8">NoxeraFX</div>
         <UserButton
           afterSignOutUrl="/index.html"
           userProfileMode="navigation"
