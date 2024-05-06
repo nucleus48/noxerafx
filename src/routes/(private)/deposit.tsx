@@ -77,6 +77,7 @@ export function Component() {
 export async function action() {
   return {
     success: true,
-    message: "Your deposit request is being processed.",
+    message:
+      "Deposit request successfull. Your request will be processed within 24 hours.",
   } as ActionData;
 }
