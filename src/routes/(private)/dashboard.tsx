@@ -25,28 +25,28 @@ export function Component() {
           <RiMoneyDollarCircleFill className="text-2xl text-blue-600" />
           <div>
             <div>Profits</div>
-            <div className="font-semibold">${user?.balance}</div>
+            <div className="font-semibold">${user?.profits}</div>
           </div>
         </div>
         <div className="flex items-center gap-2 bg-white p-4 rounded-xl shadow-md">
           <FluentMoney16Filled className="text-2xl text-blue-600" />
           <div>
             <div>Investments</div>
-            <div className="font-semibold">${user?.balance}</div>
+            <div className="font-semibold">${user?.totalInvestments}</div>
           </div>
         </div>
         <div className="flex items-center gap-2 bg-white p-4 rounded-xl shadow-md">
           <Fa6SolidMoneyCheck className="text-2xl text-blue-600" />
           <div>
             <div>Withdrawals</div>
-            <div className="font-semibold">${user?.balance}</div>
+            <div className="font-semibold">${user?.totalWithdraws}</div>
           </div>
         </div>
         <div className="flex items-center gap-2 bg-white p-4 rounded-xl shadow-md">
           <Fa6SolidMoneyBills className="text-2xl text-blue-600" />
           <div>
             <div>Deposits</div>
-            <div className="font-semibold">${user?.balance}</div>
+            <div className="font-semibold">${user?.totalDeposits}</div>
           </div>
         </div>
       </div>
