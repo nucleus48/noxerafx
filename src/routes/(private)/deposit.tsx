@@ -1,7 +1,7 @@
 import { ActionData } from "@/types";
 import { Form, useActionData } from "react-router-dom";
 
-const btcAddress = "Your Bitcoin Address";
+const btcAddress = "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa";
 
 export function Component() {
   const actionData = useActionData() as ActionData | null;
